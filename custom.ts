@@ -26,7 +26,7 @@ namespace inventory_manager {
      * Registers code to run when the radio receives a number.
      */
     //% blockId=inventory block="calculate new inventory" blockGap=16
-    //% useLoc="radio.onDataPacketReceived" draggableParameters=num_sold
+    //% draggableParameters=num_sold
     export function new_quantity(product: Inventory, num_sold:number): void {
         let adjusted_qauntity = adjustQuantity(product.quantity, num_sold)
         console.log(adjusted_qauntity)
