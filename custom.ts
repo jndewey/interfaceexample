@@ -31,7 +31,7 @@ export declare interface Inventory {
     
 }
     //% block
-    const oil_filter = {product_number:101, product_description: 'oil filter for Tesla', quantity: 10, adjust_quantity: adjust_quantity(0, 0)}
+    const part = {product_number:101, product_description: "oil filter for Tesla", quantity: 10}
 
    /**
      * Registers code to run when the radio receives a number.
