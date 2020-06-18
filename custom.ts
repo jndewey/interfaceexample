@@ -10,20 +10,28 @@ function adjustQuantity(number_sold: number, quantity: number): number{
     return adjusted_quantity
 }
 
-declare interface Inventory {
-    product_number : number;
-    product_description : string;
-    quantity: number;
     
-}
+
 
 /**
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
+
 namespace inventory_manager {
+    
+export function adjustQuantity(number_sold: number, quantity: number): number{
+    let adjusted_quantity = quantity - number_sold
+    return adjusted_quantity
+}
+export declare interface Inventory {
+    product_number : number;
+    product_description : string;
+    quantity: number;
+    
+}
     //% block
-    let oil_filter = {product_number:101, product_description: 'oil filter for Tesla', quantity: 10, adjust_quantity: adjust_quantity(0, 0)}
+    const oil_filter = {product_number:101, product_description: 'oil filter for Tesla', quantity: 10, adjust_quantity: adjust_quantity(0, 0)}
 
    /**
      * Registers code to run when the radio receives a number.
@@ -34,5 +42,8 @@ namespace inventory_manager {
         let adjusted_qauntity = adjustQuantity(product.quantity, num_sold)
         console.log(adjusted_qauntity)
     }
-
+    //% block
+export function InventoryValues(c: number, g: string, h: number): Inventory{
+return {product_number:c, product_description: g, quantity: h}
+}
 }
