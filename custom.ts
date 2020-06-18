@@ -68,7 +68,7 @@ export function print(h: string): void{
 console.log(h)
 }
 //% block
-export function createNewPart(c: number, g: string, h: number): Part{
+export function createNewPart(c: number, g: string, h: number): Inventory{
     let new_part = new Part(c, g, h)
     return new_part
 }
