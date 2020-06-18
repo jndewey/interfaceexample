@@ -19,6 +19,23 @@ function adjustQuantity(number_sold: number, quantity: number): number{
 //% weight=100 color=#0fbc11 icon=""
 
 namespace inventory_manager {
+//%block
+export class Part {
+// properties
+product_number : number;
+product_description : string;
+quantity: number;
+ constructor (pn: number, pd: string, q:number) {
+  this.product_number = pn;
+  this.product_description = pd;
+  this.quantity = q
+ }
+ // method
+ adjustQuantity(number_sold: number, quantity: number): number{
+    let adjusted_quantity = quantity - number_sold
+    return adjusted_quantity;
+ }
+}
     
 export function adjustQuantity(number_sold: number, quantity: number): number{
     let adjusted_quantity = quantity - number_sold
