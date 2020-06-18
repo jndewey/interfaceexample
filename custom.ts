@@ -47,7 +47,7 @@ export function InventoryValues(c: number, g: string, h: number): Inventory{
 return {product_number:c, product_description: g, quantity: h}
 }
 //% block
-export function ReadInventory(): string{
-return console.inspect("hi")
+export function print(h: string): void{
+console.log(h)
 }
 }
