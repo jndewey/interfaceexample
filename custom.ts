@@ -67,4 +67,9 @@ return {product_number:c, product_description: g, quantity: h}
 export function print(h: string): void{
 console.log(h)
 }
+//% block
+export function createNewPart(c: number, g: string, h: number): Part{
+    let new_part = new Part(c, g, h)
+    return new_part
+}
 }
