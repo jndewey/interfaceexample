@@ -20,7 +20,7 @@ declare interface Inventory {
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace custom {
+namespace inventory_manager {
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
