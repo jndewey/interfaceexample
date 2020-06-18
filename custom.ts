@@ -16,16 +16,19 @@ declare interface Inventory {
     quantity: number;
     
 }
-  let oil_filter = {product_number:101, product_description: 'oil filter for Tesla', quantity: 10, adjust_quantity: adjust_quantity(0, 0)}
+
 /**
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
 namespace inventory_manager {
+    //% block
+    let oil_filter = {product_number:101, product_description: 'oil filter for Tesla', quantity: 10, adjust_quantity: adjust_quantity(0, 0)}
+
    /**
      * Registers code to run when the radio receives a number.
      */
-    //% blockId=inventory block="calculate new inventory" blockGap=16
+    //% blockId=inventory block="calculate new inventory|%Inventory|%number" blockGap=16
     //% draggableParameters=num_sold
     export function new_quantity(product: Inventory, num_sold:number): void {
         let adjusted_qauntity = adjustQuantity(product.quantity, num_sold)
