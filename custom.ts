@@ -31,13 +31,13 @@ quantity: number;
   this.quantity = q
  }
  // method
- adjustQuantity(number_sold: number, quantity: number): number{
+ adjustQuantity(quantity: number, number_sold: number): number{
     let adjusted_quantity = quantity - number_sold
     return adjusted_quantity;
  }
 }
     
-export function adjustQuantity(number_sold: number, quantity: number): number{
+export function adjustQuantity(quantity: number, number_sold: number): number{
     let adjusted_quantity = quantity - number_sold
     return adjusted_quantity
 }
