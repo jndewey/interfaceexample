@@ -3,13 +3,15 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "interfaceExample": "pkg:interfaceExample.json"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "custom.ts"
+        "custom.ts",
+        "interfaceExample.json"
     ],
     "testFiles": [
         "test.ts"
